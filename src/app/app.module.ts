@@ -11,11 +11,17 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { NurseManagementPageComponent } from './nurse-management-page/nurse-management-page.component';
+import { CalendarPageComponent } from './calendar-page/calendar-page.component';
+import { HomePageComponent } from './home-page/home-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent
+    MenuComponent,
+    NurseManagementPageComponent,
+    CalendarPageComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
