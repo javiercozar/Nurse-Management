@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "nursing-shift-management"
+    }
+  },
+  "defaultProject": "nursing-shift-management",
+  "cli": {
+    "analytics": "f26430e8-3080-40ef-8937-381111ef5974"
+  }
 }
