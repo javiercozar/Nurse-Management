@@ -14,6 +14,7 @@ import { MatListModule } from '@angular/material/list';
 import { NurseManagementPageComponent } from './nurse-management-page/nurse-management-page.component';
 import { CalendarPageComponent } from './calendar-page/calendar-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { FooterPageComponent } from './footer-page/footer-page.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HomePageComponent } from './home-page/home-page.component';
     MenuComponent,
     NurseManagementPageComponent,
     CalendarPageComponent,
-    HomePageComponent
+    HomePageComponent,
+    FooterPageComponent
   ],
   imports: [
     BrowserModule,

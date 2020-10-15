@@ -5,15 +5,14 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar color="primary">Menu</mat-toolbar>
     <mat-nav-list>
+      <a mat-list-item routerLink='/login'>
+        <mat-icon>login</mat-icon> Login</a>
       <a mat-list-item routerLink='/home'>
-        <mat-icon>home</mat-icon>Home
-      </a>
+        <mat-icon>home</mat-icon>Home</a>
       <a mat-list-item routerLink='/nurse-management'>
-        <mat-icon>face</mat-icon>Nurse Management
-      </a>
+        <mat-icon>face</mat-icon>Nurse Management</a>
       <a mat-list-item routerLink='/calendar'>
-       <mat-icon>calendar_today</mat-icon> Calendar
-      </a>
+       <mat-icon>calendar_today</mat-icon> Calendar</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -27,10 +26,6 @@
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <span>Nursing Shift Management</span>
-      <span class="flexExpand"></span>
-      <button mat-button type="button">
-        <mat-icon>login</mat-icon>
-         Login</button>
     </mat-toolbar>
     <!-- Add Content Here -->
     <router-outlet></router-outlet>
