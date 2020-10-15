@@ -1,0 +1,17 @@
+.background-image {
+  background-image: url('/assets/nurse-image.jpeg')  ;
+  width: 100%;
+    /* Half height */
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;
+  opacity: 0.8;
+}
+
+.background-default-color {
+  height: 100%;
+  width: 100%;
+}

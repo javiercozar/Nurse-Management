@@ -7,7 +7,9 @@ import { NurseManagementPageComponent } from './nurse-management-page/nurse-mana
 const routes: Routes = [
   {path: 'home', component: HomePageComponent},
   {path: 'nurse-management', component: NurseManagementPageComponent},
-  {path: 'calendar', component: CalendarPageComponent}
+  {path: 'calendar', component: CalendarPageComponent},
+  {path: '', component: HomePageComponent},
+  {path: '**', redirectTo: '/home'}
 ];
 
 @NgModule({
