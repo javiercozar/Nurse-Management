@@ -1,0 +1,8 @@
+<div class="custom-input-search-container">
+  <mat-form-field hintLabel="Max 30 characters" appearance="fill">
+    <mat-label>Enter nurse name</mat-label>
+    <input matInput [(ngModel)]="nurseName" #input (ngModelChange)="OnDataChange($event)" maxlength="30" placeholder="Ex. rodriguez">
+    <mat-hint align="end">{{input.value?.length || 0}}/30</mat-hint>
+  </mat-form-field>
+</div>
+

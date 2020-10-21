@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NurseManagementPageComponent implements OnInit {
 
+  datePickerTitle = 'Choose work shift date';
+  dateInitialValue = new Date().toUTCString();
+  dateSelected: Date;
+  searchText: string;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  OnDateChangeValue(dateSelected: Date): void {
+    this.dateSelected = dateSelected;
+  }
+
+  OnSearchTextChanged(search: string): void {
+    this.searchText = search;
+  }
 }

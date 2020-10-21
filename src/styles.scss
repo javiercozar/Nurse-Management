@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
-@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+// @import '@angular/material/prebuilt-themes/indigo-pink.css';
 
 $body-height:100%;
 
@@ -10,4 +11,12 @@ html {
 body {
   margin: 0%;
   height: $body-height;
+}
+
+.margin-left-10px {
+  margin-left: 10px;
+}
+
+.margin-left-20px {
+  margin-left: 20px;
 }

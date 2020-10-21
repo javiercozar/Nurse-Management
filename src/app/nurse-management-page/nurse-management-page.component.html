@@ -1,1 +1,25 @@
-<p>nurse-management-page works!</p>
+<div class="nurse-management-container" >
+  <div class="add-nurse-container">
+    <button mat-button color="primary">Add work shift</button>
+  </div>
+  <div class="filter-container">
+    <div>
+      <app-datepicker-custom-header
+        [label]="datePickerTitle"
+        [startDateAt]="dateInitialValue"
+        (OnChangeValue)="OnDateChangeValue($event)">
+      </app-datepicker-custom-header>
+    </div>
+    <div class="margin-left-20px">
+      <app-custom-input-search-field
+        (OnTextXhanged)="OnSearchTextChanged($event)">
+      </app-custom-input-search-field>
+    </div>
+  </div>
+  <div class="table-patient-container">
+    div para tabla
+  </div>
+  <div class="footer-container">
+    div para footer
+  </div>
+</div>

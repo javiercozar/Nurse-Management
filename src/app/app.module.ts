@@ -9,12 +9,22 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatMomentDateModule } from '@angular/material-moment-adapter';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import {FormsModule} from '@angular/forms';
+
 import { NurseManagementPageComponent } from './nurse-management-page/nurse-management-page.component';
 import { CalendarPageComponent } from './calendar-page/calendar-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { FooterPageComponent } from './footer-page/footer-page.component';
+import { DatepickerCustomHeaderComponent } from './shared/datepicker-custom-header/datepicker-custom-header.component';
+import { CustomInputSearchFieldComponent } from './shared/custom-input-search-field/custom-input-search-field.component';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +33,9 @@ import { FooterPageComponent } from './footer-page/footer-page.component';
     NurseManagementPageComponent,
     CalendarPageComponent,
     HomePageComponent,
-    FooterPageComponent
+    FooterPageComponent,
+    DatepickerCustomHeaderComponent,
+    CustomInputSearchFieldComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +46,15 @@ import { FooterPageComponent } from './footer-page/footer-page.component';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatMomentDateModule,
+    MatNativeDateModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,32 @@
+
+.add-nurse-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.filter-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.table-patient-container {
+  display: flex;
+  background-color: yellow;
+}
+
+.footer-container {
+  display: flex;
+  background-color: black;
+  color: white;
+}
+
+.nurse-management-container {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+}
+
+mat-form-field {
+  margin-right: 12px;
+}
