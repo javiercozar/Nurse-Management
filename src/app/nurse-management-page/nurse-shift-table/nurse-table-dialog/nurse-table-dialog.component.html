@@ -1,6 +1,6 @@
 <h1 mat-dialog-title>Row Action :: <strong>{{action}}</strong></h1>
 <div mat-dialog-content>
-  <mat-form-field *ngIf="action != 'Delete'; else elseTemplate">
+  <mat-form-field *ngIf="showAllFieds; else elseTemplate">
     <input placeholder="{{action}} Name" matInput [(ngModel)]="localData.name">
   </mat-form-field>
   <ng-template #elseTemplate>
@@ -11,3 +11,7 @@
   <button mat-button (click)="doAction()">{{action}}</button>
   <button mat-button (click)="closeDialog()" mat-flat-button color="warn">Cancel</button>
 </div>
+
+
+<!--id, name, date, swift work update and insert-->
+<!--delete show name -->

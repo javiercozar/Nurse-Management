@@ -1,8 +1,10 @@
+import { DelegatingCompilerHost } from '@angular/compiler-cli/src/ngtsc/core/src/host';
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { Add, Delete, Update } from 'src/app/model/constants';
 import { DataTableSource } from './dataTableSource';
 import { NurseTableDialogComponent } from './nurse-table-dialog/nurse-table-dialog.component';
 import { WorkShiftDay } from './WorkShiftDay';
@@ -39,13 +41,13 @@ export class NurseShiftTableComponent implements OnInit, AfterViewInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      if (result.event === 'Add') {
+      if (result.event ===  Add) {
         this.addRowData(result.data);
       }
-      else if (result.event === 'Update') {
+      else if (result.event === Update) {
         this.updateRowData(result.data);
       }
-      else if (result.event === 'Delete') {
+      else if (result.event === Delete) {
         this.deleteRowData(result.data);
       }
     });

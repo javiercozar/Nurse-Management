@@ -1,5 +1,6 @@
 import { Component, Inject, OnInit, Optional } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Add, Update } from 'src/app/model/constants';
 import { DataTableSource } from '../dataTableSource';
 
 @Component({
@@ -10,6 +11,7 @@ import { DataTableSource } from '../dataTableSource';
 export class NurseTableDialogComponent implements OnInit {
   action: string;
   localData: any;
+  showAllFieds: boolean;
 
   constructor(public dialogRef: MatDialogRef<NurseTableDialogComponent>,
               @Optional() @Inject(MAT_DIALOG_DATA) public data: DataTableSource) { }
@@ -17,6 +19,7 @@ export class NurseTableDialogComponent implements OnInit {
   ngOnInit(): void {
     this.localData = {...this.data};
     this.action = this.localData.action;
+    this.showAllFieds = this.action === Update || this.action === Add;
   }
 
   doAction(): void {
