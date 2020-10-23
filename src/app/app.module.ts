@@ -24,7 +24,11 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { FooterPageComponent } from './footer-page/footer-page.component';
 import { DatepickerCustomHeaderComponent } from './shared/datepicker-custom-header/datepicker-custom-header.component';
 import { CustomInputSearchFieldComponent } from './shared/custom-input-search-field/custom-input-search-field.component';
-
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { NurseShiftTableComponent } from './nurse-management-page/nurse-shift-table/nurse-shift-table.component';
+import { NurseTableDialogComponent } from './nurse-management-page/nurse-shift-table/nurse-table-dialog/nurse-table-dialog.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +39,9 @@ import { CustomInputSearchFieldComponent } from './shared/custom-input-search-fi
     HomePageComponent,
     FooterPageComponent,
     DatepickerCustomHeaderComponent,
-    CustomInputSearchFieldComponent
+    CustomInputSearchFieldComponent,
+    NurseShiftTableComponent,
+    NurseTableDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +59,10 @@ import { CustomInputSearchFieldComponent } from './shared/custom-input-search-fi
     MatNativeDateModule,
     MatFormFieldModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
 
   ],
   providers: [],

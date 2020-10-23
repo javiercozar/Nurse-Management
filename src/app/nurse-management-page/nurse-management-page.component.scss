@@ -12,7 +12,8 @@
 
 .table-patient-container {
   display: flex;
-  background-color: yellow;
+  justify-content: flex-end;
+  align-items: stretch;
 }
 
 .footer-container {
