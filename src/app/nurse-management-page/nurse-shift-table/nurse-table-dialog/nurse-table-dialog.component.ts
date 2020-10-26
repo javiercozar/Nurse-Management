@@ -12,6 +12,7 @@ export class NurseTableDialogComponent implements OnInit {
   action: string;
   localData: any;
   showAllFieds: boolean;
+  shiftDateLabel = 'Shift Date';
 
   constructor(public dialogRef: MatDialogRef<NurseTableDialogComponent>,
               @Optional() @Inject(MAT_DIALOG_DATA) public data: DataTableSource) { }
@@ -31,6 +32,10 @@ export class NurseTableDialogComponent implements OnInit {
 
   closeDialog(): void {
     this.dialogRef.close({event: 'Cancel'});
+  }
+
+  OnDateChangeValue(date: Date): void {
+    this.localData.date = date;
   }
 
 }

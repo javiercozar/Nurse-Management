@@ -1,11 +1,22 @@
 <h1 mat-dialog-title>Row Action :: <strong>{{action}}</strong></h1>
 <div mat-dialog-content>
-  <mat-form-field *ngIf="showAllFieds; else elseTemplate">
-    <input placeholder="{{action}} Name" matInput [(ngModel)]="localData.name">
-  </mat-form-field>
-  <ng-template #elseTemplate>
-    Sure to delete <b>{{localData.name}}</b>?
-  </ng-template>
+  <div *ngIf="showAllFieds">
+    <mat-form-field >
+      <input placeholder="{{action}} Name" matInput [(ngModel)]="localData.name">
+    </mat-form-field>
+    <p></p>
+    <app-datepicker-custom-header
+      [startDateAt]="localData.date"
+      [label]="shiftDateLabel"
+      (OnChangeValue)="OnDateChangeValue($event)"></app-datepicker-custom-header>
+    <p></p>
+    <mat-form-field >
+      <input placeholder="{{action}} Name" matInput [(ngModel)]="localData.name">
+    </mat-form-field>
+  </div>
+  <div *ngIf="!showAllFieds">
+      Sure to delete <b>{{localData.name}}</b>?
+  </div>
 </div>
 <div mat-dialog-actions>
   <button mat-button (click)="doAction()">{{action}}</button>
